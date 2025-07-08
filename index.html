@@ -578,6 +578,28 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buscador = document.getElementById('buscador');
+
+        if (buscador) {
+            buscador.addEventListener('keyup', function () {
+                const filtro = buscador.value.toLowerCase();
+                const productos = document.querySelectorAll('.product-item');
+
+                productos.forEach(function (producto) {
+                    const nombre = producto.querySelector('h6').textContent.toLowerCase();
+                    if (nombre.includes(filtro)) {
+                        producto.parentElement.style.display = '';
+                    } else {
+                        producto.parentElement.style.display = 'none';
+                    }
+                });
+            });
+        }
+    });
+</script>
+
 </body>
 
 </html>
