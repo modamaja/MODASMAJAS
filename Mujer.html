@@ -261,22 +261,28 @@
 <!-- Script de filtrado -->
 <script>
     function filterSelection(category) {
-        let cards = document.getElementsByClassName("product-card");
-        if (category === "all") category = "";
-
-        for (let i = 0; i < cards.length; i++) {
-            cards[i].classList.remove("show");
-            if (cards[i].classList.contains(category)) {
-                cards[i].classList.add("show");
+        var products = document.getElementsByClassName('product-card');
+        if (category === 'all') {
+            // Mostrar todos
+            for (var i = 0; i < products.length; i++) {
+                products[i].style.display = 'block';
+            }
+        } else {
+            // Mostrar solo los que tienen la clase category, ocultar los demás
+            for (var i = 0; i < products.length; i++) {
+                if (products[i].classList.contains(category)) {
+                    products[i].style.display = 'block';
+                } else {
+                    products[i].style.display = 'none';
+                }
             }
         }
     }
 
-    // Mostrar todos al cargar
-    window.onload = () => {
-        filterSelection('all');
-    };
+    // Mostrar todos por defecto al cargar la página
+    filterSelection('all');
 </script>
+
 
 </body>
   <!-- Footer Start -->
