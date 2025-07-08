@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 
 <head>
@@ -35,111 +35,67 @@
                     <a class="text-dark" href="#">Soporte</a>
                 </div>
             </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="text-dark px-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="text-dark px-2" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="text-dark pl-2" href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center py-3 px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="index.html" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold">
-                        <span class="text-primary font-weight-bold border px-3 mr-1">MM</span>MAJA
-                    </h1>
-                </a>
-            </div>
-            <div class="col-lg-6 col-6 text-left">
-                <form action="#">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Buscar productos">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-3 col-6 text-right">
-                <a href="#" class="btn border"><i class="fas fa-heart text-primary"></i><span class="badge">0</span></a>
-                <a href="#" class="btn border"><i class="fas fa-shopping-cart text-primary"></i><span class="badge">0</span></a>
-            </div>
         </div>
     </div>
-    <!-- Topbar End -->
 
-    <!-- Preguntas Frecuentes -->
+    <!-- Página de Preguntas Frecuentes -->
     <div class="container py-5">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Preguntas Frecuentes</h2>
-            <p class="text-muted">Resolvemos tus dudas más comunes sobre envíos, devoluciones y más.</p>
+        <div class="text-center mb-4">
+            <h1 class="mb-4 font-weight-semi-bold text-dark">Preguntas Frecuentes</h1>
         </div>
         <div class="accordion" id="faqAccordion">
-            <!-- FAQ 1 -->
-            <div class="card mb-3">
-                <div class="card-header bg-white" id="faq1">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            ¿Cuánto tardará en llegar mi pedido?
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed text-left w-100 text-dark" type="button" data-toggle="collapse" data-target="#collapseOne">
+                            ¿Cuáles son los métodos de pago aceptados?
                         </button>
-                    </h5>
+                    </h2>
                 </div>
-                <div id="collapse1" class="collapse show" aria-labelledby="faq1" data-parent="#faqAccordion">
+                <div id="collapseOne" class="collapse" data-parent="#faqAccordion">
                     <div class="card-body">
-                        El tiempo estimado de entrega es de 2 a 5 días laborables en España. Para envíos internacionales, puede tardar hasta 10 días.
+                        Aceptamos tarjetas de crédito, débito, PayPal y Bizum.
                     </div>
                 </div>
             </div>
-            <!-- FAQ 2 -->
-            <div class="card mb-3">
-                <div class="card-header bg-white" id="faq2">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            ¿Puedo devolver un producto?
+
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed text-left w-100 text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                            ¿Cuánto tarda en llegar mi pedido?
                         </button>
-                    </h5>
+                    </h2>
                 </div>
-                <div id="collapse2" class="collapse" aria-labelledby="faq2" data-parent="#faqAccordion">
+                <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
                     <div class="card-body">
-                        Sí. Dispones de 14 días desde la recepción para solicitar la devolución. El producto debe estar sin usar y con su etiqueta original.
+                        El tiempo de entrega habitual es de 2 a 5 días hábiles.
                     </div>
                 </div>
             </div>
-            <!-- FAQ 3 -->
-            <div class="card mb-3">
-                <div class="card-header bg-white" id="faq3">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            ¿Qué métodos de pago aceptáis?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse3" class="collapse" aria-labelledby="faq3" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        Aceptamos pagos con tarjeta (Visa, Mastercard), PayPal y Bizum.
-                    </div>
-                </div>
+
+            <!-- Añade más preguntas si lo deseas -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+        <div class="row border-top border-light py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <p class="mb-0 text-dark">&copy; MODA MAJA. Todos los derechos reservados.</p>
             </div>
-            <!-- FAQ 4 -->
-            <div class="card mb-3">
-                <div class="card-header bg-white" id="faq4">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            ¿Puedo modificar o cancelar un pedido?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse4" class="collapse" aria-labelledby="faq4" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        Sí, siempre que el pedido no haya sido enviado aún. Escríbenos cuanto antes a modasmaja@gmail.com.
-                    </div>
-                </div>
+            <div class="col-md-6 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="Métodos de pago">
             </div>
         </div>
     </div>
-    <!-- Fin Preguntas -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
 
     <!-- Footer -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
