@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MODAS MAJA - Ropa de Mujer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .filter-btn {
+            margin: 5px;
+        }
+        .product-card {
+            display: none; /* Ocultos por defecto */
+        }
+        .show {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container pt-5">
+    <h2 class="text-center mb-4">Ropa de Mujer</h2>
+
+    <!-- Botones de filtro -->
+    <div class="text-center mb-4">
+        <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('all')">Todos</button>
+        <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('camisetas')">Camisetas</button>
+        <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('vestidos')">Vestidos</button>
+        <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('partes')">Partes de Abajo</button>
+        <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('bikinis')">Bikinis</button>
+        <button class="btn btn-outline-dark filter-btn" onclick="filterSelection('complementos')">Complementos</button>
+    </div>
+
+    <!-- Productos -->
+    <div class="row">
+        <!-- CAMISETAS -->
+        <div class="col-md-6 mb-4 product-card camisetas">
+            <div class="border p-3 text-center">
+                <img src="img/camiseta1.jpg" alt="Camiseta 1" class="img-fluid mb-2">
+                <h6>Nombre camiseta 1</h6>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 product-card camisetas">
+            <div class="border p-3 text-center">
+                <img src="img/camiseta2.jpg" alt="Camiseta 2" class="img-fluid mb-2">
+                <h6>Nombre camiseta 2</h6>
+            </div>
+        </div>
+
+        <!-- VESTIDOS -->
+        <div class="col-md-6 mb-4 product-card vestidos">
+            <div class="border p-3 text-center">
+                <img src="img/vestido1.jpg" alt="Vestido 1" class="img-fluid mb-2">
+                <h6>Nombre vestido 1</h6>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 product-card vestidos">
+            <div class="border p-3 text-center">
+                <img src="img/vestido2.jpg" alt="Vestido 2" class="img-fluid mb-2">
+                <h6>Nombre vestido 2</h6>
+            </div>
+        </div>
+
+        <!-- PARTES DE ABAJO -->
+        <div class="col-md-6 mb-4 product-card partes">
+            <div class="border p-3 text-center">
+                <img src="img/parteabajo1.jpg" alt="Parte de abajo 1" class="img-fluid mb-2">
+                <h6>Nombre parte abajo 1</h6>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 product-card partes">
+            <div class="border p-3 text-center">
+                <img src="img/parteabajo2.jpg" alt="Parte de abajo 2" class="img-fluid mb-2">
+                <h6>Nombre parte abajo 2</h6>
+            </div>
+        </div>
+
+        <!-- BIKINIS -->
+        <div class="col-md-6 mb-4 product-card bikinis">
+            <div class="border p-3 text-center">
+                <img src="img/bikini1.jpg" alt="Bikini 1" class="img-fluid mb-2">
+                <h6>Nombre bikini 1</h6>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 product-card bikinis">
+            <div class="border p-3 text-center">
+                <img src="img/bikini2.jpg" alt="Bikini 2" class="img-fluid mb-2">
+                <h6>Nombre bikini 2</h6>
+            </div>
+        </div>
+
+        <!-- COMPLEMENTOS -->
+        <div class="col-md-6 mb-4 product-card complementos">
+            <div class="border p-3 text-center">
+                <img src="img/complemento1.jpg" alt="Complemento 1" class="img-fluid mb-2">
+                <h6>Nombre complemento 1</h6>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 product-card complementos">
+            <div class="border p-3 text-center">
+                <img src="img/complemento2.jpg" alt="Complemento 2" class="img-fluid mb-2">
+                <h6>Nombre complemento 2</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script de filtrado -->
+<script>
+    function filterSelection(category) {
+        let cards = document.getElementsByClassName("product-card");
+        if (category === "all") category = "";
+
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].classList.remove("show");
+            if (cards[i].classList.contains(category)) {
+                cards[i].classList.add("show");
+            }
+        }
+    }
+
+    // Mostrar todos al cargar
+    window.onload = () => {
+        filterSelection('all');
+    };
+</script>
+
+</body>
+</html>
