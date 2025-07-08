@@ -535,8 +535,6 @@
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
                             <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Nuestra Tienda</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Carrito</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Finalizar Compra</a>
                             <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contáctanos</a>
                         </div>
                     </div>
@@ -587,31 +585,6 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const buscador = document.getElementById('buscador');
-
-        if (buscador) {
-            buscador.addEventListener('keyup', function () {
-                const filtro = buscador.value.toLowerCase();
-                const productos = document.querySelectorAll('.product-item');
-
-                productos.forEach(function (producto) {
-                    const nombre = producto.querySelector('h6').textContent.toLowerCase();
-                    if (nombre.includes(filtro)) {
-                        producto.parentElement.style.display = '';
-                    } else {
-                        producto.parentElement.style.display = 'none';
-                    }
-                });
-            });
-        }
-    });
-</script>
-
 </body>
 
 </html>
